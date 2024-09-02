@@ -7,5 +7,5 @@ def newMaven() {
 }
 
 def newDeploy(String jobname, String ip, String context) {
-   sh "scp /var/lib/jenkins/workspace/${jobname}/webapp/target/webapp.war root@${ip}:/var/lib/tomcat/webapps/${context}.war"    
+    sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/${jobname}/webapp/target/webapp.war root@${ip}:/var/lib/tomcat/webapps/${context}.war"
 }
