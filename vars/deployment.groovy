@@ -1,0 +1,3 @@
+def newBuild() {
+    ci
+}  
